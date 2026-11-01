@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d20">
+  <title>Junior AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">✦</span><span>Junior <b>AI</b></span></div>
+      <button id="newChatBtn" class="new-chat">＋ New conversation</button>
+      <button id="homeBtn" class="side-link active">⌂ &nbsp; Home</button>
+      <div class="recent-title">RECENT CHATS</div>
+      <div id="recentChats" class="recent-chats"><p class="empty-recent">Your chats will appear here.</p></div>
+      <div class="sidebar-footer">Made with ✦ by Junior AI</div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar"><div class="mobile-brand">✦ Junior AI</div><span class="status"><i></i> Ready to help</span></header>
+      <section class="welcome" id="welcome">
+        <div class="orb">✦</div>
+        <p class="eyebrow">YOUR CREATIVE AI ASSISTANT</p>
+        <h1>What can I help<br><span>you with today?</span></h1>
+        <p class="welcome-copy">Ask a question, explore an idea, or get help fixing your code.</p>
+        <div class="suggestions">
+          <button class="suggestion" data-prompt="Explain how websites work in simple words.">✧ <span>Explain something</span></button>
+          <button class="suggestion" data-prompt="Help me come up with an idea for a website.">⌘ <span>Brainstorm ideas</span></button>
+          <button class="suggestion" data-mode="fix" data-prompt="Paste your code here and I'll help fix it.">⌁ <span>Fix my code</span></button>
+        </div>
+      </section>
+      <section id="conversation" class="conversation" aria-live="polite"></section>
+      <div class="composer-wrap">
+        <div class="mode-row"><button id="chatMode" class="mode active">✦ Chat</button><button id="fixMode" class="mode">⌁ Fix Code</button></div>
+        <form id="chatForm" class="composer">
+          <textarea id="messageInput" rows="1" placeholder="Message Junior AI..." required></textarea>
+          <button id="sendBtn" class="send-btn" type="submit" aria-label="Send">↑</button>
+        </form>
+        <p class="disclaimer">Junior AI can make mistakes. Check important information.</p>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
